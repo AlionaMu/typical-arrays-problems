@@ -37,6 +37,7 @@ exports.avg = function avg (array) {
     }
     return sum/array.length; }
    
+    
 
 /*console.log(min([2,-24,13,-11,16,-12,-16,24,13,-38,19,-16,19,3,2,32,0,-10,-19,-27]));
 console.log(max([3,2,1]));
