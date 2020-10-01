@@ -2,43 +2,44 @@
 
 function min (array) {
     var x = Math.min.apply(null, array);
-    return x;
+    return array && array.length? x : 0;
 }
 
 function max (array) {
     var y = Math.max.apply(null, array);
-    return y;
+    return array && array.length? y : 0;
 }
 
 function avg (array) {
+    if (array && array.length) {
     const sum = array.reduce(add,0); 
-
+    
     function add(accum, a) {
         return accum + a;
     }
-    return sum/array.length; 
+    return sum/array.length}
+    else return 0; 
 }
 
 exports.min = function min (array) {
   var x = Math.min.apply(null, array);
-  return x;
+  return array && array.length? x : 0;
 }
 
 exports.max = function max (array) {
   var y = Math.max.apply(null, array);
-    return y;
+    return array && array.length? y : 0;
 }
 
 exports.avg = function avg (array) {
   
-  const sum = array.reduce(add,0); 
+  if (array && array.length) {
+    const sum = array.reduce(add,0); 
+    
     function add(accum, a) {
         return accum + a;
     }
-    return sum/array.length; }
+    return sum/array.length}
+    else return 0; }
    
     
-
-/*console.log(min([2,-24,13,-11,16,-12,-16,24,13,-38,19,-16,19,3,2,32,0,-10,-19,-27]));
-console.log(max([3,2,1]));
-console.log(avg([34,6,11,33,0,-10,10,3,22,-18,6,4,-21,32,23,18,-33,23,0,-1]));*/
